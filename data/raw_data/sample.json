@@ -1,0 +1,68 @@
+[
+  {
+    "store": "STORE_1",
+    "item": {
+      "id": 325,
+      "sales": 0
+    },
+    "date": {
+      "full": "2011-01-29",
+      "weekday": 1,
+      "month": 1,
+      "year": 2011
+    },
+    "event": null,
+    "cashback": false
+  },
+  {
+    "store": "STORE_3",
+    "item": {
+      "id": 117,
+      "sales": 34
+    },
+    "date": {
+      "full": "2011-02-06",
+      "weekday": 2,
+      "month": 2,
+      "year": 2011
+    },
+    "event": {
+      "name": "SuperBowl",
+      "category": "Sporting"
+    },
+    "cashback": true
+  },
+  {
+    "store_info": {
+      "id": "STORE_2",
+      "item_sold": {
+        "item_id": "STORE_2_1234",
+        "quantity": 7
+      }
+    },
+    "sale_date": "2011-07-04",
+    "day_of_week": 4,
+    "month_num": 7,
+    "year_num": 2011,
+    "holiday_info": {
+      "name": "IndependenceDay",
+      "type": "National"
+    },
+    "used_cashback": true
+  },
+  {
+    "store_info": {
+      "id": "STORE_1",
+      "item_sold": {
+        "item_id": "STORE_1_789",
+        "quantity": 11
+      }
+    },
+    "sale_date": "2011-08-13",
+    "day_of_week": 6,
+    "month_num": 8,
+    "year_num": 2011,
+    "holiday_info": null,
+    "used_cashback": false
+  }
+]

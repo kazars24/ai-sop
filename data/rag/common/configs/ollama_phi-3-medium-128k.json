@@ -1,0 +1,8 @@
+{
+    "backend": "ollama",
+    "task_type": "text-processing",
+    "model_name": "phi3:medium-128k",
+    "base_url": "http://127.0.0.1:11434",
+    "chunk_size": 512,
+    "chunk_overlap": 128
+}

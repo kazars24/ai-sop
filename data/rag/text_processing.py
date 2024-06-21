@@ -3,19 +3,17 @@ import logging as log
 
 from langchain_community.llms import Ollama
 from langchain_community.embeddings import OllamaEmbeddings
-from langchain.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.chains import create_retrieval_chain
 from langchain import hub
 from langchain.chains.combine_documents import create_stuff_documents_chain
-from common.settings import SingletonConfig
-from text_loader import data_loader
+from .text_loader import data_loader
 
 
-def load_data(data_path):
+def load_data(data_path, top_lines=False):
     log.info(f'[RAG][Preprocess]: Reading documents from {data_path}')
-    loaders = data_loader(data_path)
+    loaders = data_loader(data_path, top_lines)
     text = ''
     for loader in loaders:
         text += loader.get_text()
@@ -46,7 +44,7 @@ def answer_question(question, retrieval_chain):
     return response['answer']
 
 
-def process(data_path, llm_config, question):
+def process(data_path, llm_config, question, top_lines=False):
     backend = llm_config['backend']
     log.info(f'[RAG] Using backend: {backend}')
     if backend == 'ollama':
@@ -59,18 +57,10 @@ def process(data_path, llm_config, question):
             base_url=llm_config['base_url']
         )
 
-        text = load_data(data_path)
+        text = load_data(data_path, top_lines=top_lines)
         chunks = split_text(text, llm_config['chunk_size'], llm_config['chunk_overlap'])
         vector_store = create_vector_store(chunks, embed_model)
         retriever = vector_store.as_retriever()
         retrieval_chain = create_retrieval_qa_chain(llm, retriever)
         response = answer_question(question, retrieval_chain)
         return response
-
-if __name__ == "__main__":
-    data_path = "I:\\itmo\\time-series-itmo-2024\\data\\raw_data"
-    llm_config = SingletonConfig()
-    question = "What is that data about?"
-
-    response = process(data_path, llm_config, question)
-    print(response)

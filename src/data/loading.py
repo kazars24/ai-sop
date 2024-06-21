@@ -44,7 +44,7 @@ class DataLoader:
         if not os.path.isfile(file_path):
             raise FileNotFoundError(f"File {file_path} does not exist.")
 
-    def _load_data(self, file_path: str) -> pd.DataFrame:
+    def _load_data(self, file_path) -> pd.DataFrame:
         """
         Loads data from a file in either .csv or .xlsx/.xls format.
 
@@ -60,17 +60,7 @@ class DataLoader:
         - ValueError: If the file format is not supported
             (only .csv or .xlsx/.xls files are supported).
         """
-        self._check_file_existence(file_path)
-
-        if file_path.endswith('.csv'):
-            data = pd.read_csv(file_path)
-        elif file_path.endswith('.xlsx') or file_path.endswith('.xls'):
-            data = pd.read_excel(file_path)
-        else:
-            raise ValueError(
-                "Unsupported file format. "
-                "Please provide a .csv or .xlsx/.xls file.",
-            )
+        data = pd.read_csv(file_path)
 
         return data
 
@@ -188,7 +178,7 @@ class DataLoader:
 
         return True
 
-    def load_store_sales(self, store_sales_path: str) -> pd.DataFrame:
+    def load_store_sales(self, store_sales_path) -> pd.DataFrame:
         """
         Loads and preprocesses the store sales data.
 

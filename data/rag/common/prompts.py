@@ -19,6 +19,32 @@ The values in each column follow the given examples and formats.
 You pay close attention to the details provided for each column.
 """
 
+GRAPH_EXPLANATION = """
+Analyze the matplotlib graph providing short summarization, focusing on S&OP (Sales and Operations Planning) information. Please provide a comprehensive description of the graph, including the following elements:
+
+Graph type: Identify whether it's a line graph, bar chart, scatter plot, or any other type of visualization.
+Title and axes: Describe the graph's title and label the X and Y axes, including units of measurement if present.
+Time frame: Specify the time period covered in the graph (e.g., monthly, quarterly, yearly).
+Data series: Identify and describe each data series present in the graph, including their colors and markers.
+Legend: If present, describe the legend and what each item represents.
+Key metrics: Identify and describe the main S&OP metrics shown
+Trends and patterns: Describe any visible trends, patterns, or notable fluctuations in the data.
+Correlations: Identify any apparent correlations between different data series.
+Anomalies: Point out any outliers or unusual data points.
+Performance indicators: Describe how actual performance compares to forecasts or targets.
+Seasonality: If applicable, identify any seasonal patterns in the data.
+Key events: Note any significant events or milestones marked on the graph.
+Data range: Specify the minimum and maximum values for each axis.
+Additional visual elements: Describe any annotations, gridlines, or other visual elements present in the graph.
+Color scheme: Comment on the overall color scheme and its effectiveness in conveying information.
+Data density: Assess the amount of information presented and whether it's easy to interpret.
+Gaps or missing data: Identify any gaps or missing data points in the graph.
+Comparison points: If multiple graphs are present, compare and contrast their information.
+Implications: Based on the data presented, provide insights into potential business implications for sales and operations planning.
+Suggestions for improvement: If applicable, suggest ways to enhance the graph's clarity or information presentation.
+Please provide a clear and concise short summary of your observations, ensuring that all relevant S&OP information is accurately described and interpreted.
+"""
+
 DATA_EXPLANATION = """
 Please analyze the provided data and explain its structure based on the file type.
 1. If the data is in CSV format:
@@ -44,5 +70,10 @@ Columns explanation: {colums_explanation}
 Please, write single python function with all the necessary imports to generate graph using matplotlib with the following information: {prompt}.
 Set file path {filepath} as a default value to your graph function input and use data from it by reading - do not define any other data.
 Your answer should only contain python code, without any comments.
-Call the function you wrote at the end of the script.
+Very important, remember: call the function that you wrote at the end of the script.
+Your answer should looke like this:
+import matplotlib
+def func(...): # pass the file path
+    ...
+func() # calling the function
 """

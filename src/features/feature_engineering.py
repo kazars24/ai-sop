@@ -192,6 +192,6 @@ class FeaturesMaker:
                     all_features = store_sales_lags.merge(
                         dates_features, 'left', 'date',
                     )
-                    return all_features
+                    return all_features.set_index('date')
             else:
-                return store_sales_lags
+                return store_sales_lags.set_index('date')

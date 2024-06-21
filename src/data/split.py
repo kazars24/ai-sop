@@ -30,16 +30,16 @@ def train_test_split_by_date(
     """
     split_date = pd.to_datetime(split_date)
 
-    if not pd.api.types.is_datetime64_any_dtype(df[date_column]):
-        df[date_column] = pd.to_datetime(df[date_column])
+    # if not pd.api.types.is_datetime64_any_dtype(df[date_column]):
+    #     df[date_column] = pd.to_datetime(df[date_column])
 
     train_df = pd.DataFrame()
     test_df = pd.DataFrame()
 
     grouped = df.groupby('store_id')
     for _, group in grouped:
-        train_part = group[group[date_column] < split_date]
-        test_part = group[group[date_column] >= split_date]
+        train_part = group[group.index < split_date]
+        test_part = group[group.index >= split_date]
 
         train_df = pd.concat([train_df, train_part])
         test_df = pd.concat([test_df, test_part])

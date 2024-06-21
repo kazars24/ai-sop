@@ -2,6 +2,7 @@
 .idea/
 .DS_Store
 .ipynb_checkpoints/
+*/catboost_info/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

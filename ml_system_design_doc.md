@@ -1,6 +1,5 @@
-# ML System Design Doc - [RU]
-## Дизайн ML системы - \AI S&OP\ \MVP or Production System\ 
-
+# ML System Design Doc 
+## Дизайн ML системы - AI S&OP
 ### 1. Цели и предпосылки 
 #### 1.1. Зачем идем в разработку продукта?  
 

@@ -1,0 +1,6 @@
+{
+    "backend": "ollama",
+    "task_type": "image-processing",
+    "model_name": "llava-phi3",
+    "base_url": "http://127.0.0.1:11434"
+}

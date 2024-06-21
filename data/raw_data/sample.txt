@@ -1,0 +1,37 @@
+Sales Report for STORE_1
+Date: 2011-03-17 (Thursday, March 2011)
+Item: STORE_1_782
+Quantity Sold: 5
+Event: St. Patrick's Day (Holiday)
+Cashback Promotion Used: Yes
+
+Sales Report for STORE_2
+i love jennifer...
+Date: 2011-04-01 (Friday, April 2011)
+Item: STORE_2_1001
+Quantity Sold: 22
+Event: No event
+Cashback Promotion Used: No
+
+STORE_1 Sales Report
+Date: November 11, 2011 (Friday)
+Item ID: STORE_1_1111
+Units Sold: 6
+Event: Veterans Day (National Holiday)
+Cashback Used: Yes
+
+STORE_3 Sales Report
+note: this data may not be valid, maybe should delete
+Date: December 25, 2011 (Sunday)
+Item ID: STORE_3_2222
+Units Sold: 28
+Event: Christmas Day (Religious Holiday)
+Cashback Used: No
+
+STORE_2 Sales Report
+JOHN PLEASE REVIEW PREVIOUS REPORT!!!
+Date: January 1, 2012 (Sunday)
+Item ID: STORE_2_3333
+Units Sold: 14
+Event: New Year's Day (Federal Holiday)
+Cashback Used: Yes

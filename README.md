@@ -1,3 +1,8 @@
+# Preview
+![image](https://github.com/kazars24/ai-sop/assets/126725121/0d089fb7-0862-42ed-bf0c-5c303e60f33b)
+![image](https://github.com/kazars24/ai-sop/assets/126725121/dd876f91-4e52-4ff2-bc2d-fb511f1a7a9a)
+
+
 # ML System Design Doc 
 ## Дизайн ML системы - AI S&OP
 ### 1. Цели и предпосылки

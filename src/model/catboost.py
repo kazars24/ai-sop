@@ -363,7 +363,7 @@ Note:
         - The predicted trend values are added as a new column 'trend' in the
             test data DataFrame.
         """
-        last_val = y_train.iloc[-1].values[0]
+        last_val = y_train.iloc[-1]
         trend_predicts = []
         for _ in range(df_test.shape[0]):
             val = last_val + trend_model.coef_[0]

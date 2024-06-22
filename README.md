@@ -1,6 +1,7 @@
 # Preview
-![image](https://github.com/kazars24/ai-sop/assets/126725121/0d089fb7-0862-42ed-bf0c-5c303e60f33b)
-![image](https://github.com/kazars24/ai-sop/assets/126725121/dd876f91-4e52-4ff2-bc2d-fb511f1a7a9a)
+![image](https://github.com/kazars24/ai-sop/assets/126725121/58f719e9-adcf-4891-980b-6046559e6606)
+
+![image](https://github.com/kazars24/ai-sop/assets/126725121/9abdf619-6cf9-493f-8ca8-599f9c4b8554)
 
 
 # ML System Design Doc 
